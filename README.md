@@ -11,7 +11,7 @@ This singularity can be accessed from either pulsar@paf0 or dogmatix0 servers.
 The following scripts have been tailored to process and plot detections from one of the bands of the UBB or alternatively will also work
 on data from a single bandwidth receiver:
 
-### UBB_Plotter.py:
+## UBB_Plotter.py:
 Usage:
 ```
 $ python UBB_plotter.py -h
@@ -38,7 +38,7 @@ reading the header of the psrfits file.
 The script will output a ```.ar``` file. This file can be opened using the psrchive command pazi : ``` $ pazi <filename> ```
 If required clean the rfi in this spectrum using the psrchive zap option and save the file with the extension ```.ar.pazi```
 
-###UBB_Python_Plotter.py:
+## UBB_Python_Plotter.py:
 Usage:
 ```
  $ python UBB_python_plotter.py -h
