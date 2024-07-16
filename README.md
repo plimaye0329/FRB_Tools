@@ -65,7 +65,10 @@ $ vap -c nchan <filename>
 In order to successfully apply the rfi mask created by pazi, downsample the spectrum in frequency by a factor of 2. For eg: If the original nchan is 512,
 put ``` -n 256 ``` in the plotter command. 
 
-The output file will be saved in a png format for visualization. Alternatively, you can also edit the script to save a 2-D dynamic spectrum instead.
+The output file will be saved in a png format for visualization. Alternatively, you can 
+also edit the script to save a 2-D dynamic spectrum instead.
 
+## Example Output Plot:
+![github_plot](https://github.com/user-attachments/assets/0996f585-ced0-48ed-bf48-36ab872aee68)
 
 
