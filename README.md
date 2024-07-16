@@ -69,6 +69,8 @@ The output file will be saved in a png format for visualization. Alternatively, 
 also edit the script to save a 2-D dynamic spectrum instead.
 
 ## Example Output Plot:
+A single pulse from PSR B0329+54 observed with the P217 7beam L-band receiver on the Effelsberg 100-m Radio Telescope:
+
 ![github_plot](https://github.com/user-attachments/assets/0996f585-ced0-48ed-bf48-36ab872aee68)
 
 
