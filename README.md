@@ -58,7 +58,7 @@ optional arguments:
                         Output PNG filename
 
 ```
-The ```NCHAN`` corresponds to the number of frequency channels in the archive file. This can be checked using:
+The ```NCHAN``` corresponds to the number of frequency channels in the archive file. This can be checked using:
 ```
 $ vap -c nchan <filename>
 ```
