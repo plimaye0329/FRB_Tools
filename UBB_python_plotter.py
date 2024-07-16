@@ -70,7 +70,7 @@ def main():
     f_channels_reduced = f_channels[::block_size[0]]
 
     time_series = np.mean(waterfall_reduced[0:], axis=0)
-    time_series = (time_series - np.median(time_series)) / np.std(time_series)
+    time_series = (time_series - np.median(time_series[0:200])) / np.std(time_series[0:200]) # Converts timeseries to S/N Ratio by normalizing by the mean and standard deviation of the off-pulse region
 
     fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(9, 7), gridspec_kw={'height_ratios': [1, 3]})
 
