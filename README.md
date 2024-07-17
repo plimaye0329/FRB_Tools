@@ -1,9 +1,9 @@
 # FRB_Tools
 FRB_Tools is a collection of processing and data analysis scripts for working with FRB Observations from the Effelsberg 100-m Radio Telescope:
 
-##TransientX Utilities:
+## TransientX Utilities:
 
-##crossmatch.py:
+## crossmatch.py:
 
 ## FRB Observations with the Ultra BroadBand Receiver :
 The Ultra BroadBand receiver (UBB) installed on the Effelsberg 100-m Radio Telescope operates in the frequency range of 1.3 - 6 GHz.
