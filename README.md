@@ -4,7 +4,7 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 ## TransientX Utilities:
 
 ## Search Optimization:
-**transx_UBB1.sh** \\
+**transx_UBB1.sh** \
 
 This is a bash script implementation which runs the transientx_fil command on psrfits format telescope data. The script is designed to handle data from the Ultra BroadBand Receiver
 on Effelsberg but can be easily generalized by editing the bash script. TransientX has a flag named ```-zdot``` which is a zero-DM filter to get rid of strong broad rfi signals. However,
@@ -20,8 +20,26 @@ frequency downsampling (--fd), DM start (--dms), DM step (--ddm), No of DMs (--n
 can be seen in the files section ``` 'transx_UBB1.txt' ```
 
 
+**replot_UBB1.sh** \
+This is a basch script that runs replot_fil command on the psrfits data only in the time windows of transientx_fil detections by reading the cands file. The script is designed to handle data from
+the Ultra BroadBand Receiver on Effelsberg but can be easily generalized by editing the bash script. Similar to ``` transx_UBB1.sh ```, this script also runs the zdot filter and hence can be used only
+on the first three bands of UBB.
+
+The script can be used in the command line as: path to psrfits data, path to parse cands file, time downsampling (--td), widthcutoff and dmcutoff respectively. 
+``` --widthcutoff``` : This option will remove all candidates which have widths larger than the set value. Generally, this value should be set as the maximum search width
+``` --dmcutoff ``` : This option will remove all candidates identified below a certain dispersion measure. This value should be set carefully depending on the source DM.
+
+An example configuration file can be seen in the files section ``` replot_UBB1.txt ```
 
 
+**Note** : Similar scripts have been made to process the high frequency UBB Data (4-6GHz) covering the band4 and band5 respectively.
+The scripts are : ``` transx_UBB2.sh``` & ``` replot_UBB2.sh ``` with the example config files : ``` transx_UBB2.txt``` & ``` replot_UBB2.txt```
+
+
+```python
+$ ./transx_UBB1.sh
+```
+It will ask to provide a configuration file, which is a txt file with multiple columns as: 
 ## crossmatch.py:
 This script reads the output .cands file from replot_fil (TransientX). From visual inspection of replot png images, create a list of png filenames of true bursts. 
 The script will crossmatch this list with the filenames in the png filename column of the cands file and write out a new cands file with the rows specific to only
