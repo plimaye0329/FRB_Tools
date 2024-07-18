@@ -3,6 +3,10 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 
 ## TransientX Utilities:
 
+## Search Optimization:
+\textbf{transx_UBB1.sh}
+
+
 ## crossmatch.py:
 This script reads the output .cands file from replot_fil (TransientX). From visual inspection of replot png images, create a list of png filenames of true bursts. 
 The script will crossmatch this list with the filenames in the png filename column of the cands file and write out a new cands file with the rows specific to only
