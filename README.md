@@ -16,8 +16,12 @@ $ ./transx_UBB1.sh
 ```
 After running the command, it will ask if you want to input a DDplan or not based on your search specifications. For targeted searches with known source DM, no DDplan file is needed and
 the optimized DM steps for each band can be manually input into a configuration txt file. This file includes multiple columns with path to psrfits data, location to dump candidates, time downsampling (--td),
-frequency downsampling (--fd), DM start (--dms), DM step (--ddm), No of DMs (--ndm), snr threshold (--thre), min width (--minw), max_width (--maxw) and rfi masks (-zap) respectively. An example file
-can be seen in the files section ``` 'transx_UBB1.txt' ```
+frequency downsampling (--fd), DM start (--dms), DM step (--ddm), No of DMs (--ndm), snr threshold (--thre), min width (--minw), max_width (--maxw) and rfi masks (-zap) respectively. \
+
+The script reads the config file and takes chunks of three rows corresponding to the data from the three bands and processes them simultaneously using the Unix command ``` xargs ``` and further moves on 
+with steps of 3 chunks until all observations are processed.
+
+An example file can be seen in the files section ``` 'transx_UBB1.txt' ```
 
 
 **replot_UBB1.sh** \
@@ -32,7 +36,10 @@ $ ./replot_UBB1.sh
 
 It will ask to provide a configuration file, which is a txt file with multiple columns as: : path to psrfits data, path to parse cands file, time downsampling (--td), widthcutoff and dmcutoff respectively. \
 ``` --widthcutoff``` : This option will remove all candidates which have widths larger than the set value. Generally, this value should be set as the maximum search width\
-``` --dmcutoff ``` : This option will remove all candidates identified below a certain dispersion measure. This value should be set carefully depending on the source DM.
+``` --dmcutoff ``` : This option will remove all candidates identified below a certain dispersion measure. This value should be set carefully depending on the source DM.\
+
+The script reads the config file and takes chunks of three rows corresponding to the data from the three bands and processes them simultaneously using the Unix command ``` xargs ``` and further moves on 
+with steps of 3 chunks until all observations are processed.
 
 An example configuration file can be seen in the files section ``` replot_UBB1.txt ```
 
