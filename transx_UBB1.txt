@@ -1,0 +1,25 @@
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-04:48:54.fits ./Band1_Search/FRB_30min_1/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900 
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-04:48:54.fits ./Band2_Search/FRB_30min_1/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500 
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-04:48:54.fits ./Band3_Search/FRB_30min_1/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-05:18:00.fits ./Band1_Search/FRB_30min_2/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-05:18:00.fits ./Band2_Search/FRB_30min_2/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-05:18:00.fits ./Band3_Search/FRB_30min_2/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-05:47:07.fits ./Band1_Search/FRB_30min_3/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-05:47:07.fits ./Band2_Search/FRB_30min_3/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-05:47:07.fits ./Band3_Search/FRB_30min_3/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-06:19:26.fits ./Band1_Search/FRB_30min_4/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-06:19:26.fits ./Band2_Search/FRB_30min_4/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-06:19:26.fits ./Band3_Search/FRB_30min_4/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-06:48:33.fits ./Band1_Search/FRB_30min_5/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-06:48:33.fits ./Band2_Search/FRB_30min_5/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-06:48:33.fits ./Band3_Search/FRB_30min_5/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-07:20:56.fits ./Band1_Search/FRB_30min_6/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-07:20:56.fits ./Band2_Search/FRB_30min_6/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-07:20:56.fits ./Band3_Search/FRB_30min_6/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-07:50:02.fits ./Band1_Search/FRB_30min_7/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-07:50:02.fits ./Band2_Search/FRB_30min_7/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-07:50:02.fits ./Band3_Search/FRB_30min_7/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-08:19:08.fits ./Band1_Search/FRB_30min_8/ 8 1 500 0.5 100 7 0.001 0.04 1450 1600 1800 1900
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-08:19:08.fits ./Band2_Search/FRB_30min_8/ 8 1 500 2.0 25 7 0.001 0.04 2100 2200 2450 2500
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-08:19:08.fits ./Band3_Search/FRB_30min_8/ 8 1 500 5.0 10 7 0.001 0.04 3200 3300 3700 3800
+
