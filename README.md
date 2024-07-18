@@ -30,8 +30,8 @@ The script can be used in the command line as :
 $ ./replot_UBB1.sh
 ```
 
-It will ask to provide a configuration file, which is a txt file with multiple columns as: : path to psrfits data, path to parse cands file, time downsampling (--td), widthcutoff and dmcutoff respectively. 
-``` --widthcutoff``` : This option will remove all candidates which have widths larger than the set value. Generally, this value should be set as the maximum search width
+It will ask to provide a configuration file, which is a txt file with multiple columns as: : path to psrfits data, path to parse cands file, time downsampling (--td), widthcutoff and dmcutoff respectively. \
+``` --widthcutoff``` : This option will remove all candidates which have widths larger than the set value. Generally, this value should be set as the maximum search width\
 ``` --dmcutoff ``` : This option will remove all candidates identified below a certain dispersion measure. This value should be set carefully depending on the source DM.
 
 An example configuration file can be seen in the files section ``` replot_UBB1.txt ```
