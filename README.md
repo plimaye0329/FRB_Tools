@@ -4,6 +4,31 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 ## TransientX Utilities:
 
 ## crossmatch.py:
+This script reads the output .cands file from replot_fil (TransientX). From visual inspection of replot png images, create a list of png filenames of true bursts. 
+The script will crossmatch this list with the filenames in the png filename column of the cands file and write out a new cands file with the rows specific to only
+the true bursts. This is especially important when there are too many false candidates in replot_fil. You can later extract the burst MJDs from the new cands file
+for plotting the bursts.
+
+Usage:
+```
+sage: crossmatch.py [-h] -i INPUT -o OUTPUT png_filenames [png_filenames ...]
+
+Crossmatch PNG filenames with input file.
+
+positional arguments:
+  png_filenames         List of PNG filenames to crossmatch. Provide one or more filenames separated by spaces.
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input filename containing the data to be processed.
+  -o OUTPUT, --output OUTPUT
+                        Output filename where the matched rows will be written.
+
+Author: Pranav Limaye Date: May 24, 2024 Example usage: python crossmatch.py -i input.cands -o output.txt J0000-00_60439.2012380060_cfbf00000_01_01_replot.png
+J0000-00_60439.2020366037_cfbf00000_01_01_replot.png
+
+```
 
 ## FRB Observations with the Ultra BroadBand Receiver :
 The Ultra BroadBand receiver (UBB) installed on the Effelsberg 100-m Radio Telescope operates in the frequency range of 1.3 - 6 GHz.
