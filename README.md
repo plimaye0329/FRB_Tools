@@ -4,7 +4,8 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 ## TransientX Utilities:
 
 ## Search Optimization:
-**transx_UBB1.sh**
+**transx_UBB1.sh** \\
+
 This is a bash script implementation which runs the transientx_fil command on psrfits format telescope data. The script is designed to handle data from the Ultra BroadBand Receiver
 on Effelsberg but can be easily generalized by editing the bash script. TransientX has a flag named ```-zdot``` which is a zero-DM filter to get rid of strong broad rfi signals. However,
 this flag cannot be used above ~4GHz. Therefore, this script only performs search on the first three UBB bands where the ```-zdot``` flag is set ```True```. 
