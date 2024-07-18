@@ -1,0 +1,16 @@
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-04:48:54.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_1/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-04:48:54.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_1/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-05:18:00.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_2/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-05:18:00.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_2/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-05:47:07.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_3/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-05:47:07.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_3/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-06:19:26.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_4/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-06:19:26.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_4/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-06:48:33.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_5/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-06:48:33.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_5/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-07:20:56.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_6/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-07:20:56.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_6/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-07:50:02.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_7/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-07:50:02.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_7/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-08:19:08.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band4_Search/FRB_30min_8/*.cands 8 0.04 250
+/beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-08:19:08.fits /beegfsEDD/Pranav_Thesis/R147_UBB_May2024/Band5_Search/FRB_30min_8/*.cands 8 0.04 250
