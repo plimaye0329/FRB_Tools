@@ -5,6 +5,20 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 
 ## Search Optimization:
 **transx_UBB1.sh**
+This is a bash script implementation which runs the transientx_fil command on psrfits format telescope data. The script is designed to handle data from the Ultra BroadBand Receiver
+on Effelsberg but can be easily generalized by editing the bash script. TransientX has a flag named ```-zdot``` which is a zero-DM filter to get rid of strong broad rfi signals. However,
+this flag cannot be used above ~4GHz. Therefore, this script only performs search on the first three UBB bands where the ```-zdot``` flag is set ```True```. 
+
+The script can be used in the command line as:
+```python
+$ ./transx_UBB1.sh
+```
+After running the command, it will ask if you want to input a DDplan or not based on your search specifications. For targeted searches with known source DM, no DDplan file is needed and
+the optimized DM steps for each band can be manually input into a configuration txt file. This file includes multiple columns with path to psrfits data, location to dump candidates, time downsampling (--td),
+frequency downsampling (--fd), DM start (--dms), DM step (--ddm), No of DMs (--ndm), snr threshold (--thre), min width (--minw), max_width (--maxw) and rfi masks (-zap) respectively. An example file
+can be seen in the files section ``` 'transx_UBB1.txt' ```
+
+
 
 
 ## crossmatch.py:
