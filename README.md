@@ -4,7 +4,7 @@ FRB_Tools is a collection of processing and data analysis scripts for working wi
 ## TransientX Utilities:
 
 ## Search Optimization:
-$\textbf{transx\_UBB1.sh}$
+**transx_UBB1.sh**
 
 
 ## crossmatch.py:
