@@ -41,9 +41,6 @@ An example configuration file can be seen in the files section ``` replot_UBB1.t
 The scripts are : ``` transx_UBB2.sh``` & ``` replot_UBB2.sh ``` with the example config files : ``` transx_UBB2.txt``` & ``` replot_UBB2.txt```
 
 
-```python
-$ ./transx_UBB1.sh
-```
 
 ## crossmatch.py:
 This script reads the output .cands file from replot_fil (TransientX). From visual inspection of replot png images, create a list of png filenames of true bursts. 
