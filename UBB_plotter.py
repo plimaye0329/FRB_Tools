@@ -26,8 +26,8 @@ class UBBPlotter:
         command1 = [
             'dspsr',
             '-S', str(self.toa),
-            '-T', '0.6',
-            '-c', '0.6',
+            '-T', '1.0',
+            '-c', '1.0',
             '--scloffs',
             '-D', str(dm),
             '-O', output_filename,
