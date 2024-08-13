@@ -1,13 +1,11 @@
 # FRB_Tools
 FRB_Tools is a collection of processing and data analysis scripts for working with FRB Observations from the Effelsberg 100-m Radio Telescope.
 
-.
 
 
 
 
-```
-see the folder ``` FRB-UBER ``` to access the scripts and an example ```commands.txt``` file. 
+
 
 
 
