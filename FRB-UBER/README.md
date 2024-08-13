@@ -51,5 +51,5 @@ An example usage of running this loop is as follows:
 $ python3 run_commands.py commands.txt /beegfsEDD/EDD_pipeline_data/production/pipeline_data
 
 ```
-An example UBB plot of a magnetar:
+An example UBB plot of a magnetar (XTE J1810-197):
 ![marlon1](https://github.com/user-attachments/assets/fe252849-5412-4e78-b5ee-58ccefa20b36)
