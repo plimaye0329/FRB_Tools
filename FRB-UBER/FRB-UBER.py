@@ -145,7 +145,7 @@ def plot_waterfall(waterfall, f_channels, t_res, output_file):
     plt.savefig(output_file)
     plt.show()
 
-def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm, bins, output_prefix, combined_output_filename_prefix, n_samples, final_output_png, final_output_txt):
+def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm, bins, output_prefix, combined_output_filename_prefix, n_samples, final_output_png):
     burster = UBBBurster(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm)
     burster.dspsr_fullband(dm, bins, output_prefix)
 
