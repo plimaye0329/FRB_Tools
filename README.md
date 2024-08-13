@@ -34,6 +34,27 @@ positional arguments:
 optional arguments:
   -h, --help            show this help message and exit
 ```
+The above script can be runned over a loop to process multiple single pulse plots using a ```commands.txt``` file 
+The <common_path> flag in this txt file refers to the common branch of all the psrfits data files. The loop is runned using the script
+```run_commands.py``` on this txt file:
+```
+usage: run_commands.py [-h] commands_file common_path
+
+Execute a list of commands from a file with placeholders.
+
+positional arguments:
+  commands_file  Path to the file containing commands.
+  common_path    Common path to replace in commands.
+
+optional arguments:
+  -h, --help     show this help message and exit
+```
+An example usage of running this loop is as follows:
+```
+$ python3 run_commands.py commands.txt /beegfsEDD/EDD_pipeline_data/production/pipeline_data
+
+```
+see the folder ``` FRB-UBER ``` to access the scripts and an example ```commands.txt``` file. 
 
 
 
