@@ -35,6 +35,7 @@ optional arguments:
 # Batch Processing:
 The above script can be runned over a loop to process multiple single pulse plots using ```run-UBER.py``` script.
 The usage of this script is as follows:
+(Note: The FRB-UBER.py script has to be on the same path to run this script)
 
 ```
 usage: UBB_Batch.py [-h] [--n_samples N_SAMPLES] file_band1 file_band2 file_band3 file_band4 file_band5 mjd_file dm bins output_prefix combined_output_filename_prefix pdf_output_filename
