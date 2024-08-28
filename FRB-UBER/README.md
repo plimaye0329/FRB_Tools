@@ -85,3 +85,7 @@ python3 UBB_Batch.py --n_samples 50 /beegfsEDD/EDD_pipeline_data/production/pipe
  
 
 ![b0355_mjd_8](https://github.com/user-attachments/assets/caff9dba-7548-40bc-a0cc-5da18301dbd7)
+
+2) Single Pulse Collage of B0355+54:
+
+[b0355.pdf](https://github.com/user-attachments/files/16781544/b0355.pdf)
