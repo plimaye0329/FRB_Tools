@@ -29,12 +29,13 @@ class UBBBurster:
         self.tmjd3 = self._calculate_tmjd(self.primary3)
         self.tmjd4 = self._calculate_tmjd(self.primary4)
         self.tmjd5 = self._calculate_tmjd(self.primary5)
+        #print(self.tmjd1)
 
-        self.freq1 = 1625
-        self.freq2 = 2275
-        self.freq3 = 3562
-        self.freq4 = 4637
-        self.freq5 = 5625
+        self.freq1 = 1614.84375
+        self.freq2 = 2264.84375
+        self.freq3 = 3539.0625
+        self.freq4 = 4664.0625
+        self.freq5 = 5601.5625
 
         self.toa1 = self._calculate_toa(self.tmjd1, self.burst_mjd, self.freq1, self.dm)
         self.toa2 = self._calculate_toa(self.tmjd2, self.burst_mjd, self.freq2, self.dm)
@@ -42,11 +43,32 @@ class UBBBurster:
         self.toa4 = self._calculate_toa(self.tmjd4, self.burst_mjd, self.freq4, self.dm)
         self.toa5 = self._calculate_toa(self.tmjd5, self.burst_mjd, self.freq5, self.dm)
 
-        self.cepoch1 = self.tmjd1 + self.toa1 / 86400
-        self.cepoch2 = self.tmjd2 + self.toa2 / 86400
-        self.cepoch3 = self.tmjd3 + self.toa3 / 86400
-        self.cepoch4 = self.tmjd4 + self.toa4 / 86400
-        self.cepoch5 = self.tmjd5 + self.toa5 / 86400
+        self.toa1 = round(self.toa1,6)
+        self.toa2 = round(self.toa2,6)
+        self.toa3 = round(self.toa3,6)
+        self.toa4 = round(self.toa4,6)
+        self.toa5 = round(self.toa5,6)
+
+        #self.cepoch1 = self.tmjd1 + self.toa1 / 86400
+        self.cepoch1 = self.tmjd1 + self.toa1/86400 #+ (self.tmjd1 - self.tmjd5) # + (self.tmjd1 - self.tmjd5) #self.tmjd1 - (self.tmjd1 - self.tmjd5)
+        self.cepoch2 = self.tmjd2 + self.toa2/86400 #+ (self.tmjd2 - self.tmjd5)# + (self.tmjd2 - self.tmjd5)#self.tmjd5 - (self.tmjd2 - self.tmjd5)
+        self.cepoch3 = self.tmjd3 + self.toa3/86400 #+ (self.tmjd3 - self.tmjd5)# + (self.tmjd3 - self.tmjd5) #self.tmjd5 - (self.tmjd3 - self.tmjd5)
+        self.cepoch4 = self.tmjd4 + self.toa4/86400 #+ (self.tmjd4 - self.tmjd5)# + (self.tmjd4 - self.tmjd5)#self.tmjd5 - (self.tmjd4 - self.tmjd5)
+        self.cepoch5 = self.tmjd5 + self.toa5/86400#self.tmjd5 
+
+
+        self.cepoch1 = round(self.cepoch1, 12)
+        self.cepoch2 = round(self.cepoch2, 12)
+        self.cepoch3 = round(self.cepoch3, 12)
+        self.cepoch4 = round(self.cepoch4, 12)
+        self.cepoch5 = round(self.cepoch5, 12)
+
+
+        print('toa band 1 is', self.toa1)
+        print('toa band 2 is', self.toa2)
+        print('toa band 3 is', self.toa3)
+        print('toa band 4 is', self.toa4)
+        print('toa band 5 is', self.toa5)
 
     def _calculate_tmjd(self, primary_header):
         imjd = primary_header['STT_IMJD']
@@ -55,8 +77,8 @@ class UBBBurster:
         return imjd + (smjd / 86400.0) + (soffs / 86400.0)
 
     def _calculate_toa(self, tmjd, burst_mjd, freq, dm):
-        delay_seconds = (4.15 * 10**6 * ((1 / freq**2) - (1 / 6000**2))) / 1000 * dm
-        return (burst_mjd - tmjd + (delay_seconds / 86400)) * 86400 - 0.5
+        delay_seconds = (4.1487416 * 10**6 * ((1 / freq**2) - (1 / 5976.328125**2))) / 1000 * dm
+        return ((burst_mjd + delay_seconds/86_400) - tmjd)*86_400 - 0.5
 
     def dspsr_fullband(self, dm, bins, output_prefix):
         commands = [
@@ -145,51 +167,72 @@ def plot_waterfall(waterfall, f_channels, t_res, output_file):
     plt.savefig(output_file)
     plt.show()
 
-def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm, bins, output_prefix, combined_output_filename_prefix, n_samples, final_output_png):
+
+def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm, bins, output_prefix, combined_output_filename_prefix, final_output_png, n_samples=200):
     burster = UBBBurster(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, dm)
     burster.dspsr_fullband(dm, bins, output_prefix)
 
-    waterfall1, f_channels1, t_res1 = load_psrchive(f"{output_prefix}_1.ar", 640)
-    waterfall2, f_channels2, t_res2 = load_psrchive(f"{output_prefix}_2.ar", 640)
-    waterfall3, f_channels3, t_res3 = load_psrchive(f"{output_prefix}_3.ar", 1200)
-    waterfall4, f_channels4, t_res4 = load_psrchive(f"{output_prefix}_4.ar", 1200)
-    waterfall5, f_channels5, t_res5 = load_psrchive(f"{output_prefix}_5.ar", 800)
+    print("Processing archives...")
+    # Load and process the archives
+    waterfall1, f_channels1, t_res1 = load_psrchive(f"{output_prefix}_1.ar", 1280)
+    waterfall2, f_channels2, t_res2 = load_psrchive(f"{output_prefix}_2.ar", 1280)
+    waterfall3, f_channels3, t_res3 = load_psrchive(f"{output_prefix}_3.ar", 2400)
+    waterfall4, f_channels4, t_res4 = load_psrchive(f"{output_prefix}_4.ar", 2400)
+    waterfall5, f_channels5, t_res5 = load_psrchive(f"{output_prefix}_5.ar", 1600)
 
+    print("Creating dynamic spectra...")
     waterfall_reduced1, t_res_reduced1 = process_waterfall(waterfall1, t_res1)
     waterfall_reduced2, t_res_reduced2 = process_waterfall(waterfall2, t_res2)
     waterfall_reduced3, t_res_reduced3 = process_waterfall(waterfall3, t_res3)
     waterfall_reduced4, t_res_reduced4 = process_waterfall(waterfall4, t_res4)
     waterfall_reduced5, t_res_reduced5 = process_waterfall(waterfall5, t_res5)
 
-    max_time_bins = min([waterfall.shape[1] for waterfall in [waterfall_reduced1, waterfall_reduced2, waterfall_reduced3, waterfall_reduced4, waterfall_reduced5]])
-    n_samples = max_time_bins // 2 if n_samples is None else min(n_samples, max_time_bins // 2)
-
-    sliced_spectrum1 = extract_sliced_spectrum(waterfall_reduced1, n_samples)
-    sliced_spectrum2 = extract_sliced_spectrum(waterfall_reduced2, n_samples)
-    sliced_spectrum3 = extract_sliced_spectrum(waterfall_reduced3, n_samples)
-    sliced_spectrum4 = extract_sliced_spectrum(waterfall_reduced4, n_samples)
-    sliced_spectrum5 = extract_sliced_spectrum(waterfall_reduced5, n_samples)
-
-    combined_waterfall_1_2, combined_f_channels_1_2 = combine_waterfalls([sliced_spectrum1, sliced_spectrum2], [f_channels1, f_channels2])
-    combined_waterfall_3_4_5, combined_f_channels_3_4_5 = combine_waterfalls([sliced_spectrum3, sliced_spectrum4, sliced_spectrum5], [f_channels3, f_channels4, f_channels5])
+    combined_waterfall_1_2, combined_f_channels_1_2 = combine_waterfalls([waterfall_reduced1, waterfall_reduced2], [f_channels1, f_channels2])
+    combined_waterfall_3_4_5, combined_f_channels_3_4_5 = combine_waterfalls([waterfall_reduced3, waterfall_reduced4, waterfall_reduced5], [f_channels3, f_channels4, f_channels5])
 
     freq_gap_start = combined_f_channels_1_2.max()
     freq_gap_end = combined_f_channels_3_4_5.min()
     stitched_waterfall, stitched_f_channels = insert_nan_band(combined_waterfall_1_2, combined_waterfall_3_4_5, combined_f_channels_1_2, combined_f_channels_3_4_5, freq_gap_start, freq_gap_end, freq_gap_bins=400)
 
-    time_series = np.nanmean(stitched_waterfall[1300:6000], axis=0)
-    noise_floor = int((len(time_series)) / 3)
-    time_series = (time_series - np.nanmean(time_series[0:noise_floor])) / np.nanstd(time_series[0:noise_floor])
-    time1 = np.arange(time_series.shape[0]) * t_res_reduced1 - time_series.shape[0] // 2 * t_res_reduced1
 
+
+    print("Setting RFI FLags to median values...")
+    median_value = np.nanmedian(stitched_waterfall)
+   # Set multiple frequency ranges to NaN: (These are known rfi channels, edit this according to the rfi environment)
+    freq_ranges = [(1450,1600),(1800,1900),(2100,2200),(2450,2500),(3200,3690),(4225,4425),(4625,4675)]
+
+    for freq_range_min, freq_range_max in freq_ranges:
+        freq_indices = np.where((stitched_f_channels >= freq_range_min) & (stitched_f_channels <= freq_range_max))[0]
+        stitched_waterfall[freq_indices,:] = median_value
+
+
+
+   # Calculate the time series and normalize
+    time_series = np.nanmean(stitched_waterfall[1300:6000], axis=0)
+    noise_floor = int(len(time_series) / 8)
+    time_series = (time_series - np.nanmean(time_series[0:noise_floor])) / np.nanstd(time_series[0:noise_floor])
+
+    # Identify the peak and center around it
+    peak_index = np.argmax(time_series)
+    start_index = max(0, peak_index - n_samples)
+    end_index = min(stitched_waterfall.shape[1], peak_index + n_samples)
+
+    # Adjust the waterfall and time axis
+    centered_waterfall = stitched_waterfall[:, start_index:end_index]
+    time_centered = np.arange(centered_waterfall.shape[1]) * t_res_reduced1
+    time_centered -= time_centered[len(time_centered) // 2]  # Center the time axis around zero
+
+
+    print("Creating Burst Plots...")
+    # Plot the results
     fig, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(9, 7), gridspec_kw={'height_ratios': [1, 3]})
-    ax1.plot(time1, time_series, color='black')
+    ax1.plot(time_centered, time_series[start_index:end_index], color='black')
     ax1.set_ylabel('S/N')
     ax1.grid(True)
 
-    im = ax2.imshow(stitched_waterfall, aspect='auto', cmap='plasma', origin='lower',
-                    extent=[time1.min(), time1.max(), stitched_f_channels.min(), stitched_f_channels.max()],
-                    vmin=np.nanpercentile(stitched_waterfall, 5), vmax=np.nanpercentile(stitched_waterfall, 95))
+    im = ax2.imshow(centered_waterfall, aspect='auto', cmap='plasma', origin='lower',
+                    extent=[time_centered.min(), time_centered.max(), stitched_f_channels.min(), stitched_f_channels.max()],
+                    vmin=np.nanpercentile(centered_waterfall, 5), vmax=np.nanpercentile(centered_waterfall, 95))
     ax2.set_xlabel('Time (s)')
     ax2.set_ylabel('Frequency (MHz)')
 
@@ -201,12 +244,17 @@ def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, 
     plt.tight_layout()
     plt.savefig(final_output_png)
     plt.close()
-    #np.savetxt(final_output_txt, stitched_waterfall)
+
+
+    # Remove the intermediate .ar files
+    for i in range(1, 6):
+        ar_file = f"{output_prefix}_{i}.ar"
+        if os.path.exists(ar_file):
+            os.remove(ar_file)
+            print(f"Removed {ar_file}")
+    print("Processing Complete!")
 
 if __name__ == "__main__":
-
-        
-
     parser = argparse.ArgumentParser(description="Process UBBBurster data.")
     parser.add_argument("file_band1", type=str, help="Path to the file for band 1")
     parser.add_argument("file_band2", type=str, help="Path to the file for band 2")
@@ -218,10 +266,10 @@ if __name__ == "__main__":
     parser.add_argument("bins", type=int, help="Number of bins")
     parser.add_argument("output_prefix", type=str, help="Output prefix for intermediate files")
     parser.add_argument("combined_output_filename_prefix", type=str, help="Prefix for combined output files")
-    parser.add_argument("n_samples", type=int, help="Number of samples around the pulse for slicing spectrum (preferred range : 100-400 depending on your pulse structure and width)")
     parser.add_argument("final_output_png", type=str, help="Filename for the final output PNG")
-    #parser.add_argument("final_output_txt", type=str, help="Filename for the final output TXT")
+    parser.add_argument("--n_samples", type=int, default=200, help="Number of samples around the pulse for slicing spectrum")
 
     args = parser.parse_args()
 
-    main(args.file_band1, args.file_band2, args.file_band3, args.file_band4, args.file_band5, args.burst_mjd, args.dm, args.bins, args.output_prefix, args.combined_output_filename_prefix, args.n_samples, args.final_output_png)
+    main(args.file_band1, args.file_band2, args.file_band3, args.file_band4, args.file_band5, args.burst_mjd, args.dm, args.bins, args.output_prefix, args.combined_output_filename_prefix, args.final_output_png, args.n_samples)
+
