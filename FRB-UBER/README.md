@@ -77,7 +77,7 @@ python3 FRB-UBER.py /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search
 
 Making burst collage using MJD List:
 ```
-python3 UBB_Batch.py --n_samples 50 /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-04:05:15.fits mjd_list.txt 529.56 1024 r147 r147 r147
+python3 UBB_Batch.py --n_samples 50 /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-04:05:15.fits b0355_mjd.txt 529.56 1024 r147 r147 r147
 ```
 
 # Example Plots:
