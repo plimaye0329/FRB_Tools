@@ -1,4 +1,4 @@
-![ls1](https://github.com/user-attachments/assets/dd3c119f-bc6b-4295-bd3a-b5cd98afd416)## FRB-UBER : (**U**ltra **B**roadBand **E**ffelsberg **R**eceiver plotter)
+## FRB-UBER : (**U**ltra **B**roadBand **E**ffelsberg **R**eceiver plotter)
 The Ultra BroadBand receiver (UBB) installed on the Effelsberg 100-m Radio Telescope operates in the frequency range of 1.3 - 6 GHz.
 The data is recorded by the Effelsberg Direct Digitization (EDD) System in standard PSRFITS Format. 
 
