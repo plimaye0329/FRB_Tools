@@ -61,4 +61,8 @@ optional arguments:
                         Number of samples around the pulse for slicing spectrum
 
 ```
+This script takes a mjd.txt file as input which should have a 1-D array of burst mjds for which you want to make waterfaller plots.
+The script will create a pdf file with a 3 X 3 plot layout as well as save the individual plots in seperate .png files.
 
+Note: The parameter ```--n_samples``` decides how many time samples to consider around the burst center. For a single component burst,
+this can be set to 100 but for a multi-component burst, set this to 200
