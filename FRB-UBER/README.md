@@ -8,7 +8,7 @@ This singularity can be accessed from either pulsar@paf0 or dogmatix0 servers
 This is a python script to make FRB or pulsar/magnetar single pulse dynamic spectrum plots across 1.3 - 6GHz Ultra BroadBand (UBB) receiver installed on the 
 Effelsberg 100-m Radio Telescope. 
 ```
-usage: last_UBER.py [-h] [--n_samples N_SAMPLES] file_band1 file_band2 file_band3 file_band4 file_band5 burst_mjd dm bins output_prefix combined_output_filename_prefix final_output_png
+usage: FRB-UBER.py [-h] [--n_samples N_SAMPLES] file_band1 file_band2 file_band3 file_band4 file_band5 burst_mjd dm bins output_prefix combined_output_filename_prefix final_output_png
 
 Process UBBBurster data.
 
