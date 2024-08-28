@@ -1,4 +1,4 @@
-## FRB-UBER : (**U**ltra **B**roadBand **E**ffelsberg **R**eceiver plotter)
+![ls1](https://github.com/user-attachments/assets/dd3c119f-bc6b-4295-bd3a-b5cd98afd416)## FRB-UBER : (**U**ltra **B**roadBand **E**ffelsberg **R**eceiver plotter)
 The Ultra BroadBand receiver (UBB) installed on the Effelsberg 100-m Radio Telescope operates in the frequency range of 1.3 - 6 GHz.
 The data is recorded by the Effelsberg Direct Digitization (EDD) System in standard PSRFITS Format. 
 
@@ -67,3 +67,21 @@ The script will create a pdf file with a 3 X 3 plot layout as well as save the i
 
 Note: The parameter ```--n_samples``` decides how many time samples to consider around the burst center. For a single component burst,
 this can be set to 100 but for a multi-component burst, set this to 200
+
+
+# Example:
+Making a single burst plot: 
+```
+python3 FRB-UBER.py /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-04:05:15.fits 60439.172625  529.56 8192 r147 r147 r147 --n_samples 150
+```
+
+Making burst collage using MJD List:
+```
+python3 UBB_Batch.py --n_samples 50 /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search1/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search2/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search3/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search4/34-24/FRB20240114A_20240509-04:05:15.fits /beegfsEDD/EDD_pipeline_data/production/pipeline_data/search5/34-24/FRB20240114A_20240509-04:05:15.fits mjd_list.txt 529.56 1024 r147 r147 r147
+```
+
+# Example Plots:
+1) Single Pulse of B0355+54:
+ 
+
+![b0355_mjd_8](https://github.com/user-attachments/assets/caff9dba-7548-40bc-a0cc-5da18301dbd7)
