@@ -1,5 +1,0 @@
-# commands.txt
-
-python3 final_UBB.py <common_path>/search1/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search2/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search3/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search4/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search5/38-24/XTEJ1810_20240612-00:15:18.fits 60473.044153 178.8 4096 magnetar combined_magnetar 300 magnetar_burst magnetar_data.txt
-python3 final_UBB.py <common_path>/search1/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search2/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search3/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search4/38-24/XTEJ1810_20240612-00:15:18.fits <common_path>/search5/38-24/XTEJ1810_20240612-00:15:18.fits 60473.044233 178.8 4096 other_magnetar combined_other_magnetar 300 other_magnetar_burst other_magnetar_data.txt
-
