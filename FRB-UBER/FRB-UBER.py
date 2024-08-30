@@ -208,7 +208,7 @@ def main(file_band1, file_band2, file_band3, file_band4, file_band5, burst_mjd, 
 
 
    # Calculate the time series and normalize
-    time_series = np.nanmean(stitched_waterfall[1300:6000], axis=0)
+    time_series = np.nanmean(stitched_waterfall[0:], axis=0)
     noise_floor = int(len(time_series) / 8)
     time_series = (time_series - np.nanmean(time_series[0:noise_floor])) / np.nanstd(time_series[0:noise_floor])
 
