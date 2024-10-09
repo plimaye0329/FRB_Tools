@@ -83,6 +83,52 @@ Author: Pranav Limaye Date: May 24, 2024 Example usage: python crossmatch.py -i 
 J0000-00_60439.2020366037_cfbf00000_01_01_replot.png
 
 ```
+## crossmatch_transx.py:
+This is essentially the same script as crossmatch.py. The key difference is that the script matches the replot png files to candidates in the transx.cands file instead
+of working on the replot.cands file. From injection testing, it was seen that the parameters identified by transientX like burst S/N, width are more accurate compared
+to candidates recovered after running replot and hence in order to extract precise S/N and burst widths, we implement this matching. 
+
+Usage:
+```
+usage: crossmatch_transx.py [-h] -i INPUT -o OUTPUT png_filenames [png_filenames ...]
+
+Crossmatch PNG filenames with input file.
+
+positional arguments:
+  png_filenames         List of PNG filenames to crossmatch. Provide one or more filenames separated by spaces.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input filename containing the data to be processed.
+  -o OUTPUT, --output OUTPUT
+                        Output filename where the matched rows will be written.
+
+Author: Pranav Limaye Date: May 24, 2024 Example usage: python crossmatch_script.py -i input.cands -o output.txt _60439.2009370249_cfbf00000_01_01_replot.png
+_60439.2020366037_cfbf00000_01_01_replot.png
+
+
+```
+## crossmatch_processed.py:
+This is an additional step performed on the output file from crossmatch_transx.py. For the same real burst, transientx returns multiple candidates as it is not optimizing
+the DM-T plane as replot does. Therefore, for the same burst you get *_01_01.png, *_02_01.png, *_03_01.png etc. This script only keeps the candidates with file ending with
+_01_01.png and gets rid of all the other redundant candidates.
+
+Usage:
+```
+usage: crossmatch_processed.py [-h] input_file output_file
+
+Filter crossmatcher output by keeping rows with '_01_01.png' in the image file name.
+
+positional arguments:
+  input_file   Path to the input crossmatcher output file.
+  output_file  Path to save the filtered output file.
+
+optional arguments:
+  -h, --help   show this help message and exit
+```
+
+
 
 ## FRB Observations with the Ultra BroadBand Receiver :
 The Ultra BroadBand receiver (UBB) installed on the Effelsberg 100-m Radio Telescope operates in the frequency range of 1.3 - 6 GHz.
